@@ -1,0 +1,22 @@
+/* Explorer Filename styles */
+.nav-file-title-content {
+  display: inline-flex;
+  align-items: end;
+}
+
+.nav-file-title-content .folder-filename-title {
+  color: #504945;
+  font-size: 85%;
+  margin-left: 6px;
+  margin-bottom: 1px;
+  opacity: 1; /* Replace with 0 if you want it to only appear on hover */
+  transition-duration: 0.5s;
+}
+
+.nav-folder:hover .nav-file-title-content .folder-filename-title {
+  opacity: 1;
+}
+
+.mod-root > .nav-folder-title > .nav-folder-title-content {
+  background-color: rgba(255, 0, 0, 0.2);
+}

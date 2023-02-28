@@ -31,8 +31,12 @@ export const setTitle = (item: FileItem, vault: Vault) => {
     vault.read(item.file).then(function (val) {
         const match = /# (.+)\s*/.exec(val);
         if (match != null) {
-            const name = match[1];
-            item.titleInnerEl.innerText = name;
+          const name = match[1];
+          item.titleInnerEl.innerText = name;
+          const originalTitle = document.createElement('em');
+          originalTitle.className = 'folder-filename-title';
+          originalTitle.textContent = item.file.basename + '.md';
+          item.titleInnerEl.append(originalTitle);
         } 
     }).catch(error => {
         console.log(`Error retrieving content of ${item.file.path}: ${error}`)
