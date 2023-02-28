@@ -21,7 +21,7 @@ export const setupTitle = (plugin: FileExplorerNoteCount, vault: Vault, revert =
 export const setTitle = (item: FileItem, vault: Vault) => {
     if (item.file.extension != "md") { return }
 
-    let idMatch = item.file.basename.match(/([0-9]+|[a-z]+)/g)!
+    let idMatch = item.file.basename.match(/([^\/\\]+)/g)!
     if (idMatch) {
         let indentCount = (idMatch.length - 1)
         let indentStr = (indentCount * 20).toString() + "px"
