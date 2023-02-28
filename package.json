@@ -1,7 +1,7 @@
 {
-    "name": "file-explorer-note-titles",
+    "name": "obsidian-explorer-titles",
     "version": "1.0.0",
-    "description": "Shows the first markdown header of a note in the file explorer",
+    "description": "Replaces the filename on the explorer with the file's heading.",
     "main": "main.js",
     "scripts": {
         "prettier": "prettier --write 'src/**/*.+(ts|tsx|json|html|css)'",
